@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - Global Union Int</title>
+    <!--
+    Stacked Template
+    http://www.templatemo.com/tm-505-stacked
+    -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap-theme.min.css">
+    <link href="~/Content/css/sweetalert.css" rel="stylesheet" />
+    <link href="~/fonts/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/css/templatemo-style.css">
+
+    <script src="~/Scripts/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style>
+        /*.navigation {
+            opacity: 0.5;
+        }*/
+
+        .navigation > ul {
+            list-style-type: none;
+            margin: 0;
+            padding-top: 20px;
+            width: 12%;
+            background-color: #455871;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            opacity: 0.5;
+        }
+
+        .navigation > ul > li a {
+            margin-top: 10px;
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .navigation > ul > li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navigation > ul > li a:hover:not(.active) {
+            background-color: #6a81a9;
+            color: white;
+        }
+
+        /*.panel {
+            margin-left: 5%;
+        }*/
+    </style>
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body ng-app="MvcBlank">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    @* ORIGINAL NAVBAR: *@
+    @*<nav class="navBar">
+        <div class="burger">
+            <div class="burger__patty"></div>
+        </div>
+
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="/" class="nav__link c-blue"><img src="~/Content/img/home-icon.png" alt="Home Page"></a>
+            </li>
+            <li class="nav__item">
+                <a href="/Admin/Tracking" class="nav__link c-yellow scrolly" style="text-align: center;">Tracking</a>
+            </li>
+            <li class="nav__item">
+                <a href="/Admin/DeliveryOrder" class="nav__link c-red" style="text-align: center;">Delivery Order</a>
+            </li>
+            <li class="nav__item">
+                <a href="/Admin/ClientService" class="nav__link c-green" style="text-align: center;">Add Contacts</a>
+            </li>
+        </ul>
+    </nav>*@
+
+    <div class="navigation">
+        <ul>
+            <li><a class="activeHome" href="/">Home</a></li>
+            <li><a class="activeTracking" href="/Admin/Tracking">Tracking</a></li>
+            <li><a class="activeDelivery" href="/Admin/DeliveryOrder">Delivery Order</a></li>
+            <li><a class="activeContacts" href="/Admin/ClientService">Add Contacts</a></li>
+        </ul>
+    </div>
+
+    <section class="panel b-blue" id="1">
+        <article class="panel__wrapper">
+            <div class="panel__content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 opaqueBox">
+                            <div>
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @* 2 key things to making this run (place these after jquery script): *@
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-local-storage.js"></script>
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/js/plugins.js"></script>
+    <script src="~/Scripts/js/main.js"></script>
+    <script src="~/Scripts/app/services/apiRequestService.js"></script>
+    <script src="~/Scripts/app/services/authService.js"></script>
+
+
+    @RenderSection("scripts", false) @*Need this here after angular script as it needs to render angular first*@
+</body>
+</html>

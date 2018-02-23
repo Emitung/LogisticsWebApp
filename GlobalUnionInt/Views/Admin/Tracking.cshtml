@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Tracking";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<tracking-view></tracking-view>
+
+
+@section styles {
+    <link href="~/Content/css/loaders.min.css" rel="stylesheet" />
+    <style>
+        .ibox {
+            border-top-left-radius: 3px;
+        }
+        .trackingForm {
+            margin-top: 30px;
+        }
+        th, td {
+            width: 200px;
+            text-align: center;
+        }
+        th {
+            height: 30px;
+            border-bottom: solid;
+        }
+        table {
+            margin-top: 100px;
+        }
+        .thSpan {
+            color: red;
+        }
+
+        /*LOADER*/
+        .loader {
+            margin-top: 50px;
+        }
+        .ball-spin-fade-loader > div:nth-child(1) {
+            background-color: #0955b3;
+            left: 50% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(2) {
+            background-color: #0955b3;
+            left: 51.4% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(3) {
+            background-color: #0955b3;
+            left: 52% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(4) {
+            background-color: #0955b3;
+            left: 51.4% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(5) {
+            background-color: #0955b3;
+            left: 50% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(6) {
+            background-color: #0955b3;
+            left: 48.3% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(7) {
+            background-color: #0955b3;
+            left: 47.5% !important;
+        }
+        .ball-spin-fade-loader > div:nth-child(8) {
+            background-color: #0955b3;
+            left: 48.3% !important;
+        }
+    </style>
+}
+
+
+@section scripts {
+    @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>*@
+
+    @*<script src="~/Scripts/js/vendor/bootstrap.min.js"></script>*@
+
+    <script src="~/Scripts/components/TrackingComponent.js"></script>
+    <script src="~/Scripts/loaders.css.js"></script>
+}

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "DeliveryOrder";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<delivery-order></delivery-order>
+
+@section styles {
+    <style>
+        .ibox {
+            border-top-left-radius: 3px;
+        }
+        .formRow {
+            margin-left: 5px;
+        }
+        .nameInput {
+            /*width: 435px !important;*/
+            width: 50% !important;
+            margin-left: 10px;
+        }
+        .locationInput {
+            /*width: 428px !important;*/
+            width: 40% !important;
+            margin-left: 25px;
+        }
+    </style>
+    }
+
+@section scripts {
+    <script src="~/Scripts/components/DeliveryOrderComponent.js"></script>
+    }

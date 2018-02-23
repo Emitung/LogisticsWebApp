@@ -1,0 +1,50 @@
+﻿<div class="col-lg-12">
+    <div class="ibox">
+        <div class="row">
+            <form name="trackingFrm" class="text-center trackingForm">
+                <label>NCA Tracking Number:</label>
+                <div class="form-inline">
+                    <span>933 - </span>
+                    <input type="text" class="form-control" placeholder="Tracking Number" ng-model="$ctrl.trackingNum" />
+                    <button type="button" class="btn btn-success" ng-click="$ctrl.enter($ctrl.trackingNum)">Enter</button>
+                </div>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight</th>
+                        <th>Date</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Pieces</th>
+                        <th>Weight(Kg)</th>
+                        <th>STD</th>
+                        <th>STA</th>
+                        <th>ETD/<span class="thSpan">ATD</span></th>
+                        <th>ETA/<span class="thSpan">ATA</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td ng-repeat="item1 in $ctrl.webscraperResp1" ng-bind-html="item1.html"></td>
+                    </tr>
+                    <tr>
+                        <td ng-repeat="item2 in $ctrl.webscraperResp2" ng-bind-html="item2.html"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="loader" ng-show="enterSearch">
+                <div class="ball-spin-fade-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

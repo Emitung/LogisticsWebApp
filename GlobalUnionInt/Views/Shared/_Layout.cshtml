@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - Global Union Int</title>
+    <!--
+    Stacked Template
+    http://www.templatemo.com/tm-505-stacked
+    -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="~/Content/css/templatemo-style.css">
+
+    <script src="~/Scripts/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body ng-app="MvcBlank" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="row header">
+        <div class="col-lg-3 logoImg"><img src="~/Content/img/TemplateGlobalUnionIcon - V4.png" alt="Global Union Logo"></div>
+        <h3 class="col-lg-offset-3">"Best delivery in all of SoCal!"</h3>
+    </header>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="174">
+        <div class="container-fluid">
+            @*<div class="navbar-header">
+                    <a class="navbar-brand" href="#">Global Union International Inc.</a>
+                </div>*@
+            <ul class="nav navbar-nav">
+                @*<li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>*@
+                <li class="nav__item">
+                    <a href="#Home">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#About">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#ContactUs">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-user"></i> Sign Up</a></li>
+                <li><a href="#"><i class="fa fa-sign-in"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="panel b-blue" id="Home">
+        <article class="panel__wrapper">
+            <div class="panel__content--active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="home-content">
+                                <div class="home-heading">
+                                    <h1><em>Global Union</em> International Inc.</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="home-box-content">
+                                            <div class="left-text">
+                                                <h4>New <em>Stacked</em> Template</h4>
+                                                <p>Stacked is brought to you by <a href="https://www.facebook.com/templatemo" target="_blank">templatemo</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam sit amet ante vehicula, aliquam mauris in, luctus neque.</p>
+                                            </div>
+                                            <div class="right-image">
+                                                <img src="~/Content/img/right-home-image.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="panel b-yellow" id="About">
+        <article class="panel__wrapper">
+            <div class="panel__content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="about-content">
+                                <div class="heading">
+                                    <h4>About us</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="about-box-content">
+                                            <img src="~/Content/img/about-image.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-md-offset-5">
+                                        <div class="about-box-text">
+                                            <h4>Curabitur varius sapien</h4>
+                                            <p>Nulla vel accumsan dui. Aliquam tincidunt elit elit, nec iaculis neque interdum dictum. Donec venenatis quam enim, eu mattis arcu rhoncus id. Ut ac urna tellus.</p>
+                                            <div class="primary-button">
+                                                <a href="#3">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="panel b-green" id="ContactUs">
+        <article class="panel__wrapper">
+            <div class="panel__content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="contact-content">
+                                <div class="heading">
+                                    <h4>Contact us</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="contat-form">
+                                            <form id="contact" action="" method="post">
+                                                <fieldset>
+                                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                                                </fieldset>
+                                                <fieldset>
+                                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email" required="">
+                                                </fieldset>
+                                                <fieldset>
+                                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="more-info">
+                                            <p>
+                                                Lorem ipsum dolor , consectetur adipiscing elit. Nunc purus ligula, ullamcorper id velit id, vestibulum auc sapien. Sed quis mauris eget sem imperdiet rhoncus.<br><br>
+                                                <em>
+                                                    3344 Etiam mauris erat,
+                                                    <br>Vestibulum eu augue nec, 10550
+                                                </em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="footer">
+                                <p>
+                                    Copyright &copy; 2018 Global Union International Inc.
+                                    | Designed by <a href="http://www.templatemo.com" target="_parent">templatemo</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @* 2 key things to making this run (place these after jquery script): *@
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-local-storage.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/app/services/authService.js"></script>
+    
+
+    @*  *@
+
+    @RenderSection("scripts", false) @*Need this here after angular script as it needs to render angular first*@
+</body>
+</html>

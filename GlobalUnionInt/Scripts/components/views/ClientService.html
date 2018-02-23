@@ -1,0 +1,109 @@
+﻿<div class="col-lg-12">
+    <uib-tabset>
+        <uib-tab tabindex="0" heading="New Contacts">
+            <div class="ibox">
+                <form name="truckingFrm">
+                    <div class="row well">
+                        <div class="form-inline">
+                            <h4>New Trucking Company Information:</h4>
+                            <label>Trucking Company Name: </label>
+                            <input type="text" class="form-control nameInput" ng-class="{'invalid': truckingFrm.truckingName.$invalid && truckingFrm.truckingName.$touched}" name="truckingName" placeholder="Trucking Company Name" ng-model="$ctrl.truckerModel.truckingCompanyName" required />
+                            <label>City Location: </label>
+                            <input type="text" class="form-control locationInput" placeholder="Company City Location" ng-model="$ctrl.truckerModel.location" />
+                            <button type="button" class="btn btn-primary" ng-click="$ctrl.submit(truckingFrm)" ng-disabled="truckingFrm.$invalid">Submit</button>
+                        </div>
+                        <div class="col-lg-offset-3">
+                            <div class="has-error" ng-class="{'nameError': truckingFrm.truckingName.$invalid && truckingFrm.truckingName.$touched}" ng-show="truckingFrm.truckingName.$invalid && truckingFrm.truckingName.$touched">This field is required</div>
+                        </div>
+                    </div>
+                </form>
+                <form name="clientFrm">
+                    <div class="row well">
+                        <div class="form-group col-md-12">
+                            <h4>New Client Company Information:</h4>
+                            <label>Client Company Name: </label>
+                            <input type="text" class="form-control" ng-class="{'invalid': clientFrm.clientName.$invalid && clientFrm.clientName.$touched}" name="clientName" placeholder="Client Company Name" ng-model="$ctrl.clientModel.clientCompanyName" required />
+                        </div>
+                        <div class="form-group col-md-7">
+                            <label>Street Address: </label>
+                            <input type="text" class="form-control locationInput" ng-class="{'invalid': clientFrm.clientStreet.$invalid && clientFrm.clientStreet.$touched}" name="clientStreet" placeholder="Street Address" ng-model="$ctrl.clientModel.streetAddress" />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>City: </label>
+                            <input type="text" class="form-control locationInput" ng-class="{'invalid': clientFrm.clientCity.$invalid && clientFrm.clientCity.$touched}" name="clientCity" placeholder="City" ng-model="$ctrl.clientModel.city" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>State: </label>
+                            <select class="form-control" ng-options="state.id as state.name for state in $ctrl.stateList" ng-class="{'invalid': clientFrm.clientState.$invalid && clientFrm.clientState.$touched}" name="clientState" ng-model="$ctrl.clientModel.stateId" required >
+                                <option value="">Please choose a state</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Zip Code: </label>
+                            <input type="text" class="form-control locationInput" ng-class="{'invalid': clientFrm.clientZip.$invalid && clientFrm.clientZip.$touched}" name="clientZip" placeholder="Zip Code" ng-model="$ctrl.clientModel.postalCode" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <button type="button" class="btn btn-primary pull-right btnClass" ng-click="$ctrl.submit(clientFrm)" ng-disabled="clientFrm.$invalid">Submit</button>
+                        </div>
+                        <div class="col-lg-offset-3">
+                            <div class="has-error" ng-class="{'nameError': clientFrm.clientName.$invalid && clientFrm.clientName.$touched}" ng-show="clientFrm.clientName.$invalid && clientFrm.clientName.$touched">This field is required</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </uib-tab>
+        <uib-tab tabindex="1" heading="Current Trucking Contacts">
+            <div class="ibox">
+                <div class="col-lg-12">
+                    <table class="col-lg-12">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in $ctrl.truckerList">
+                                <td>{{item.truckingCompanyName}}</td>
+                                <td>{{item.location}}</td>
+                                <td>
+                                    <a class="btn btn-link btn-sm" title="Update" ng-click="$ctrl.edit(item)"><i class="fa fa-pencil"></i></a>
+                                    <a class="btn btn-link btn-sm" title="Delete" ng-click="$ctrl.delete(item)"><i class="fa fa-times"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab tabindex="2" heading="Current Client Contacts">
+            <div class="ibox">
+                <div class="col-lg-12">
+                    <table class="col-lg-12">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in $ctrl.clientList">
+                                <td>{{item.clientCompanyName}}</td>
+                                <td>
+                                    {{item.streetAddress}},
+                                    {{item.city}}, {{item.postalCode}}
+                                </td>
+                                <td>
+                                    <a class="btn btn-link btn-sm" title="Update" ng-click="$ctrl.edit(item)"><i class="fa fa-pencil"></i></a>
+                                    <a class="btn btn-link btn-sm" title="Delete" ng-click="$ctrl.delete(item)"><i class="fa fa-times"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

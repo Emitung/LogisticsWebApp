@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "ClientService";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<client-service></client-service>
+
+@section styles {
+    <style>
+        .nameInput {
+            width: 30% !important;
+            margin: 0px 10px;
+        }
+        .invalid {
+            border-color: red;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(206, 5, 5, 0.54);
+        }
+        .nameError {
+            color: red;
+        }
+
+        .btnClass {
+            margin-top: 30px;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        th {
+            height: 50px;
+        }
+
+        td {
+            height: 30px;
+        }
+
+        .nav-tabs > li > a:hover {
+            background-color: #dad8d8;
+            color: #495967;
+        }
+
+        .fa-pencil {
+            color: #2b71cc;
+        }
+
+        .fa-times {
+            color: #b32f3d;
+        }
+
+        /*EDIT MODAL*/
+        .modal-header {
+            background-color: #455871;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+    </style>
+    }
+
+
+@section scripts {
+    <script src="~/Scripts/components/ClientServiceComponent.js"></script>
+    <script src="~/Scripts/components/ClientServiceEditModalComponent.js"></script>
+    }
+
